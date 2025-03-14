@@ -1,5 +1,5 @@
 import daisyui from "daisyui";
-function Navbar(){ 
+function Navbar({setCurrency}){ 
 return (<>
 <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
@@ -10,9 +10,8 @@ return (<>
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Homepage</a></li>
-        <li><a>Portfolio</a></li>
-        <li><a>About</a></li>
+        <li><a onClick={()=>{setCurrency('usd') ; console.log("currency changed to usd")}}>USD</a></li>
+        <li><a onClick={()=>{setCurrency('inr');console.log("currency changed to inr")}}>INR</a></li>
       </ul>
     </div>
   </div>
