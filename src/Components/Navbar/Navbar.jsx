@@ -1,5 +1,8 @@
 import daisyui from "daisyui";
-function Navbar({setCurrency}){ 
+import { currencyContext } from "../../context/currencyContext";
+import { useContext } from "react";
+function Navbar(){ 
+  const {setCurrency}=useContext(currencyContext)
 return (<>
 <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
